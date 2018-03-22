@@ -78,14 +78,12 @@ mPopUpWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
 * 长按MenuItem会Toast该Item的Title。
 * 设置系统壁纸。
 ```
-WallpaperManager mWallManager = WallpaperManager
-				.getInstance(getActivity());
-		mWallManager.suggestDesiredDimensions(wallpaperWidthPX,
-				wallpaperHeightPX);
-		Intent intent = new Intent();
-		intent.setAction(Intent.ACTION_WALLPAPER_CHANGED);
-		mWallManager.setBitmap(mBitmap);//还有setDrawable()等方法。
-		mContext.sendBroadcast(intent);
+WallpaperManager mWallManager = WallpaperManager.getInstance(getActivity());
+mWallManager.suggestDesiredDimensions(wallpaperWidthPX,wallpaperHeightPX);
+Intent intent = new Intent();
+intent.setAction(Intent.ACTION_WALLPAPER_CHANGED);
+mWallManager.setBitmap(mBitmap);//还有setDrawable()等方法。
+mContext.sendBroadcast(intent);
 ```
 * 获取系统壁纸。
 ```
@@ -151,11 +149,10 @@ Intent intent= new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
 ```
 //设置英语为系统语言
 Locale locale = new Locale("es", "es");
-IActivityManager am = ActivityManagerNative
-								.getDefault();
-						Configuration config = am.getConfiguration();
-						config.setLocale(locale);
-						am.updateConfiguration(config);
+IActivityManager am = ActivityManagerNative.getDefault();
+Configuration config = am.getConfiguration();
+config.setLocale(locale);
+am.updateConfiguration(config);
 ```
 * 获取当前系统语言。
 ```
@@ -232,7 +229,7 @@ class MyTrans implements  ViewPager.PageTransformer{
 ```
 //判断viewpager是否能继续左滑。(即已到最右的一页，判断准则有无惯性滑动)---若有内容的滑动是有惯性滑动状态。(当然排除极端无聊的用户)
 
- /**
+    /**
      * 1.有内容的滑动的状态值变化：
      * 1--->2---->0
      *
