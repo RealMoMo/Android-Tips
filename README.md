@@ -2,7 +2,7 @@
 
 ### 本项目会持续更新
 
-内容是我自己平时学习与工作积累的代码，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
+内容是我自己平时学习与工作积累的代码与准则，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
 
 
 * Android Tools命名空间原来是有大用处的。大致有三种主要功能：</br>
@@ -10,6 +10,7 @@
   xml 预览</br>
   资源压缩</br>
 [具体阅读地址点我](https://www.jianshu.com/p/2912bcba4465)
+* 如果你觉得在安装Eclipse后还需要配置android开发环境很麻烦，你可以直接使用ADT Bundle，它是一个懒人套餐。反正我就是怎么过来的。[链接](http://www.androiddevtools.cn/)
 * 使用Toast时，建议定义一个全局Toast对象。可以避免连续显示Toast 时不能取消上一次 Toast 消息的情况。
 * 灵活使用ViewStub Merge Include标签优化布局。
 * 静态变量不要直接或者间接引用Activity、Service等。这会使用Activity以及它所引用的所有对象无法释放，若用户操作时间一长，内存就会狂升。
@@ -330,11 +331,23 @@ try {
 * 我常用SystemClock.sleep(long ms)模拟网络延迟，并且不会抛出InterruptedException。
 * Activity的recreate()：一个Activity又一次创建自己一个新实例的方法。调用该方法目标Activity会又一次走一遍自己的生命周期。
 * Android平台不建议使用枚举,Android官方的性能优化相关课程提过存在性能问题。[大神胡凯传送门](http://hukai.me/)
+* Android进程保活招式大全[传送门](https://juejin.im/entry/586bcd07570c350068b1fba2)
+* Java8愉快且方便的处理时间的类：LocalDate、LocalTime、LocalDateTime。相比Date来说，它们更安全、更精确也更明确。
+* 为了减轻应用程序主进程的内存压力，对于耗内存比较多的界面（比如视频播放界面、flash播放界面等），可以在AndroidManifest.xml文件中对应的Activity标签下调用“android:process=".processname"”单开一个进程，但在退出这个界面的时候一定要在该界面的onDestory方法中调用System的kill方法来杀掉该进程。
+* 在res/values/arrays.xml文件中定义的单个数组的元素个数不宜过大，过大会导致加载数据时非常慢，有时候你需要使用数组资源时数据有可能还没加载完成。
+* 可以通过为application、activity自定义主题的方式来关掉多点触摸功能，只需要在自定义的主题下添加这两个标签：
+```
+  <item name="android:windowEnableSplitTouch">false</item>
+  <item name="android:splitMotionEvents">false</item>
+```
+* 我个人比较喜欢关于Android矢量图的学习文章，是外文的。[干货链接](https://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html)
+* 使用 Canvas.drawBitmapMesh实现仿真水波纹效果，网上搜一大把。
 
 
 //TODO update 开发工具
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
-* Genymotion
+* Genymotion不解释
+* 代码对比：Beyond compare
 
 //TODO update AS插件
 
