@@ -1,12 +1,12 @@
-## Android-Tips
+# Android-Tips
 
-内容是我自己平时的学习与工作的积累。如有错误欢迎指正,如有侵权,请联系我删除。
+内容是我自己平时学习与工作积累的代码，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
 
 
-* Android Tools命名空间原来是有大用处的。大致有三种主要功能：
-  xml中的错误处理
-  xml 预览
-  资源压缩
+* Android Tools命名空间原来是有大用处的。大致有三种主要功能：</br>
+  xml中的错误处理</br>
+  xml 预览</br>
+  资源压缩</br>
 [具体阅读地址点我](https://www.jianshu.com/p/2912bcba4465)
 * 使用Toast时，建议定义一个全局Toast对象。可以避免连续显示Toast 时不能取消上一次 Toast 消息的情况。
 * 灵活使用ViewStub Merge Include标签优化布局。
