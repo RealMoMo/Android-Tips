@@ -270,7 +270,7 @@ class MyTrans implements  ViewPager.PageTransformer{
     }
 
 ```
-*只用于应用内的广播，用LocalBroadcastManager本地广播。效率高，安全性更好。
+* 只用于应用内的广播，用LocalBroadcastManager本地广播。效率高，安全性更好。
 * 避免使用隐式 Intent 广播敏感信息，信息可能被其他注册了对应BroadcastReceiver 的 App 接收。
 * 不要在 Activity#onDestroy()内执行释放资源的工作，例如一些工作线程的销毁和停止，因为onDestroy()执行的时机可能较晚。可根据实际需要，在Activity#onPause()/onStop()中结合 isFinishing()的判断来执行。
 * Android5.0 以后安全性要求较高的应用 应该使 用 window.setFlag(LayoutParam.FLAG_SECURE) 禁止截图&录屏。
