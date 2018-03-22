@@ -1,5 +1,7 @@
 # Android-Tips
 
+### 本项目会持续更新
+
 内容是我自己平时学习与工作积累的代码，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
 
 
@@ -22,7 +24,7 @@ android:scrollbars="vertical"
 android:fadeScrollbars="false"
 ```
 * ListView、GridView都要实现Item的点击事件与长按事件。则Item长按监听回调函数要return true,否则长按是会执行setOnItemClickListener。
-* 禁止listview的item项获得焦点，而让item的子控件获得焦点
+* 禁止listview的item项获得焦点，而让item的子控件获得焦点。
 ```
 //设置item项的子控件能够获得焦点（默认为false，即默认item项的子控件是不能获得焦点的）
 listView.setItemsCanFocus(true); 
@@ -50,7 +52,7 @@ mPopUpWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
 				location[0] - w / 2 + targetView.getWidth() / 2, location[1] - h -10);
 	}
 ```
-* 设置系统的触摸提示音功能
+* 设置系统的触摸提示音功能。
 ```
 //打开关闭触摸声音
 		Settings.System.putInt(mContext.getContentResolver(), 
@@ -72,8 +74,8 @@ mPopUpWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
 ```
 //TODO add img
 
-* 长按MenuItem会Toast该Item的Title
-* 设置系统壁纸
+* 长按MenuItem会Toast该Item的Title。
+* 设置系统壁纸。
 ```
 WallpaperManager mWallManager = WallpaperManager
 				.getInstance(getActivity());
@@ -84,7 +86,7 @@ WallpaperManager mWallManager = WallpaperManager
 		mWallManager.setBitmap(mBitmap);//还有setDrawable()等方法。
 		mContext.sendBroadcast(intent);
 ```
-* 获取系统壁纸
+* 获取系统壁纸。
 ```
 WallpaperManager.getInstance(getContext()).getDrawable();
 ```
@@ -132,7 +134,7 @@ VolumeObserver  mVolObserver = new VolumeObserver(mContext.getContentResolver())
 					Uri.parse("content://mstar.tv.usersetting/soundsetting/Volume")
 		             , true, mVolObserver);
 ```
-* 终止Android中HandlerThread的方法
+* 终止Android中HandlerThread的方法。
 ```
 mHandlerThread.getLooper().quit();
 ```
@@ -200,8 +202,8 @@ Glide.with(this)
 
 * view.performClick()触摸该View点击事件。
 * activity.moveTaskToBack(true);按Back键回桌面，但不销毁该Activity。
-* ANR异常保存在/data/anr/traces.txt
-* ViewPager切换动画
+* ANR异常保存在/data/anr/traces.txt。
+* ViewPager切换动画。
  ```
 
 //设置viewpager切换动画
@@ -327,16 +329,16 @@ try {
 ```
 * 我常用SystemClock.sleep(long ms)模拟网络延迟，并且不会抛出InterruptedException。
 * Activity的recreate()：一个Activity又一次创建自己一个新实例的方法。调用该方法目标Activity会又一次走一遍自己的生命周期。
-* Android平台不建议使用枚举,Android官方的性能优化相关课程提过存在性能问题。传送门//TODO胡凯
+* Android平台不建议使用枚举,Android官方的性能优化相关课程提过存在性能问题。[大神胡凯传送门](http://hukai.me/)
 
 
-//TODO 开发工具
+//TODO update 开发工具
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion
 
-//TODO AS插件
+//TODO update AS插件
 
-//TODO 工具类以及自定义View
+//TODO update 工具类以及自定义View
 
 
 
