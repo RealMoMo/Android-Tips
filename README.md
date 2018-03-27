@@ -339,7 +339,41 @@ try {
 ```
 * 我个人比较喜欢关于Android矢量图的学习文章，是外文的。[干货链接](https://www.androiddesignpatterns.com/2016/11/introduction-to-icon-animation-techniques.html)
 * 使用 Canvas.drawBitmapMesh实现仿真水波纹效果，网上搜一大把。
+* Android Studio使用自己Framework架包。因为原生有些API的限制或反射等问题。需要使用到自己Framework架包。如果只是直接导入架包到项目，依旧编译不通过。需以下步骤：
+```
+//1.架包的依赖方式为编译时使用。
 
+//2.project的build.gradle增加
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+
+
+//add this
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+            options.compilerArgs.add('-Xbootclasspath/p:app/libs/framework-full.jar') //写架包的绝对路径或相对路径
+        }
+    }
+}
+
+//3.app的build.gradle增加
+defaultConfig {
+    ...
+
+    multiDexEnabled true
+
+}
+
+//4.显示依旧报错，但编译可以通过。
+```
+* View类中的getDrawingCache()等一系列方法可以用于获取View显示的Bitmap对象。
+* ouchSlop，系统所能识别出的被认为是最小的滑动距离，ViewConfiguration.get(context).getScaledTouchSlop()。常用于自定义View。
+* Context的作用域
+![](https://github.com/RealMoMo/Android-Tips/blob/master/img/context.png)
 
 //TODO update 开发工具
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
