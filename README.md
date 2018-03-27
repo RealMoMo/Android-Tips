@@ -372,13 +372,24 @@ defaultConfig {
 ```
 * View类中的getDrawingCache()等一系列方法可以用于获取View显示的Bitmap对象。
 * ouchSlop，系统所能识别出的被认为是最小的滑动距离，ViewConfiguration.get(context).getScaledTouchSlop()。常用于自定义View。
-* Context的作用域
+* Context的作用域</br>
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/context.png)
+* 修改Toast字体大小。
+```
+	Toast toast = Toast.makeText(IndexActivity.this, "这个是一个测试", Toast.LENGTH_SHORT);
+	// 修改Toast字体大小
+	LinearLayout linearLayout = (LinearLayout) toast.getView();
+	TextView messageTextView = (TextView) linearLayout.getChildAt(0);
+	messageTextView.setTextSize(25);
+	// 显示Toast
+	toast.show();
+```
 
 //TODO update 开发工具
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
 * 代码对比：Beyond compare
+* 压缩图片资源利器:TinyPNG
 
 //TODO update AS插件
 
