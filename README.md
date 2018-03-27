@@ -10,7 +10,7 @@
   xml 预览</br>
   资源压缩</br>
 [具体阅读地址点我](https://www.jianshu.com/p/2912bcba4465)
-* 如果你觉得在安装Eclipse后还需要配置android开发环境很麻烦，你可以直接使用ADT Bundle，它是一个懒人套餐。反正我就是怎么过来的。[链接](http://www.androiddevtools.cn/)
+* 如果你觉得在安装Eclipse后还需要配置android开发环境很麻烦，你可以直接使用ADT Bundle，它是一个懒人套餐。反正我就是怎么过来的。[下载链接](http://www.androiddevtools.cn/)
 * 使用Toast时，建议定义一个全局Toast对象。可以避免连续显示Toast 时不能取消上一次 Toast 消息的情况。
 * 灵活使用ViewStub Merge Include标签优化布局。
 * 静态变量不要直接或者间接引用Activity、Service等。这会使用Activity以及它所引用的所有对象无法释放，若用户操作时间一长，内存就会狂升。
