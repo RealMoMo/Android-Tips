@@ -390,7 +390,7 @@ defaultConfig {
 //最简单打包后应用名称(还可以根据debug release等各版本设置对应apk名字)
 android.applicationVariants.all { variant ->
     variant.outputs.all {
-        outputFileName = "OEMFloatBar.apk"
+        outputFileName = "customName.apk"
     }
 
 }
