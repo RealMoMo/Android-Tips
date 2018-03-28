@@ -397,15 +397,40 @@ android.applicationVariants.all { variant ->
 ```
 
 //TODO update 开发工具
+* Git
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
 * 代码对比：Beyond compare
 * 压缩图片资源利器:TinyPNG
 * CMD神器：cmder
+* 颜色吸管
 
 //TODO update AS插件
 
 //TODO update 工具类以及自定义View
+* Google推出的[FlexboxLayout](https://github.com/google/flexbox-layout)
+* [HeaderAndFooterRecyclerView](https://github.com/cundong/HeaderAndFooterRecyclerView)
+* [UltimateRecyclerView](https://github.com/cymcsg/UltimateRecyclerView)
+* [SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerView)
+* 圆形ImageView最多star的项目[CircleImageView](https://github.com/hdodenhof/CircleImageView)
+* Google推出适用于Android可扩展媒体播放器[ExoPlayer](https://github.com/google/ExoPlayer)
+* [SmoothProgressBar](https://github.com/castorflex/SmoothProgressBar)
+* [CoordinatorTabLayout](https://github.com/hugeterry/CoordinatorTabLayout)
+* [NavigationTabBar](https://github.com/Devlight/NavigationTabBar)
+* [PhotoView](https://github.com/chrisbanes/PhotoView)你懂的
+* [PreviewSeekBar](https://github.com/rubensousa/PreviewSeekBar),还可以搭配ExoPlayer玩耍
+* [StyleableToast](https://github.com/Muddz/StyleableToast)
+* [Toasty](https://github.com/GrenderG/Toasty)
+* 来疯直播安卓控件[SopCastComponent](https://github.com/LaiFeng-Android/SopCastComponent)
+* 各式各样选择器[AndroidPicker](https://github.com/gzu-liyujiang/AndroidPicker)
+* 国人代码家出品[AndroidImageSlider](https://github.com/daimajia/AndroidImageSlider)
+* [android-floating-action-button](https://github.com/futuresimple/android-floating-action-button)
+* [Context-Menu.Android](https://github.com/Yalantis/Context-Menu.Android)
+* Yalantis出品UI一流[Side-Menu.Android](https://github.com/Yalantis/Side-Menu.Android)
+* [vlayout](https://github.com/alibaba/vlayout)
+* [UltraViewPager](https://github.com/alibaba/UltraViewPager)
+* 不错的Loading控件[GABottleLoading](https://github.com/Ajian-studio/GABottleLoading)
+* 很炫的[GADownloading](https://github.com/Ajian-studio/GADownloading)
 
 
 
