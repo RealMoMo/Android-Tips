@@ -18,7 +18,8 @@
 * ImageView Selector不生效的解决方案
 <br>1.ImageView要加上clickable="true"，不然它的selector 是不会有效果。</br>
 2.ImageView selector的默认图片item要放到最后。
-
+* 自定义progressbar seekbar ui样式。发现最后进度条的粗细和滑块一样大。请设置android:maxHeight&android:minHeight,这是指定进度条最大/小高度的（此高度并非SeekBar整个控件的高度）。
+* 了解与开发原生Setting[干货链接](http://blog.csdn.net/joychanger/article/details/51336527)
 * 设置ScrollView始终显示滚动条
 ```
 android:scrollbars="vertical"
@@ -61,6 +62,7 @@ mPopUpWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
 ```
 
 * 系统闪烁标签blink,闪烁频率500毫秒,不支持修改。BlinkLayout源码位置：Layoutinflate中的一个private类型的内部类，继承自FrameLayout。
+
 ```
 <blink
     android:layout_width="wrap_content"
@@ -73,8 +75,7 @@ mPopUpWindow.setBackgroundDrawable(new ColorDrawable(0x00000000));
 
 </blink>
 ```
-//TODO add img
-
+![](https://github.com/RealMoMo/Android-Tips/blob/master/img/blinklayout.gif)
 * 长按MenuItem会Toast该Item的Title。
 * 设置系统壁纸。
 ```
@@ -384,12 +385,23 @@ defaultConfig {
 	// 显示Toast
 	toast.show();
 ```
+* Android Studio3.0生成apk名字配置。
+```
+//最简单打包后应用名称(还可以根据debug release等各版本设置对应apk名字)
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        outputFileName = "OEMFloatBar.apk"
+    }
+
+}
+```
 
 //TODO update 开发工具
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
 * 代码对比：Beyond compare
 * 压缩图片资源利器:TinyPNG
+* CMD神器：cmder
 
 //TODO update AS插件
 
