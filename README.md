@@ -1,10 +1,10 @@
 # Android-Tips
 
-### 本项目会持续更新
+### This project will be continuously updated(本项目会持续更新)
 
 内容是我自己平时学习与工作积累的代码与准则，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
 
-
+### Tips
 * Android Tools命名空间原来是有大用处的。大致有三种主要功能：</br>
   xml中的错误处理</br>
   xml 预览</br>
@@ -396,7 +396,7 @@ android.applicationVariants.all { variant ->
 }
 ```
 
-//TODO update 开发工具
+### Development tools
 * Git
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
@@ -407,7 +407,7 @@ android.applicationVariants.all { variant ->
 
 //TODO update AS插件
 
-//TODO update 工具类以及自定义View
+### CutsomView
 * Google推出的[FlexboxLayout](https://github.com/google/flexbox-layout)
 * [HeaderAndFooterRecyclerView](https://github.com/cundong/HeaderAndFooterRecyclerView)
 * [UltimateRecyclerView](https://github.com/cymcsg/UltimateRecyclerView)
@@ -431,6 +431,71 @@ android.applicationVariants.all { variant ->
 * [UltraViewPager](https://github.com/alibaba/UltraViewPager)
 * 不错的Loading控件[GABottleLoading](https://github.com/Ajian-studio/GABottleLoading)
 * 很炫的[GADownloading](https://github.com/Ajian-studio/GADownloading)
+* [SwipeBackLayout](https://github.com/ikew0ng/SwipeBackLayout)
+* [](https://github.com/ksoichiro/Android-ObservableScrollView)
+* [SmileyRating](https://github.com/sujithkanna/SmileyRating)
+* [PasscodeView](https://github.com/kevalpatel2106/PasscodeView)
+* 仿最美应用的底栏[ZuiMeiTAG](https://github.com/huage2580/ZuiMeiTAG)
+* Florent出品[ArcLayout](https://github.com/florent37/ArcLayout)
+* 验证码[CaptchaImageView](https://github.com/jineshfrancs/CaptchaImageView)
+* 类似Github贡献热点图[TContributionsView](https://github.com/barryhappy/TContributionsView)
+* 国人基于exoPlayer开发的播放器[yjPlay](https://github.com/yangchaojiang/yjPlay)
+* 简单好用的[ColorTextView](https://github.com/zhonghanwen/ColorTextView)
+* 强大下拉刷新控件[SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
+* 灵动的红鲤鱼[Fish](https://github.com/Jichensheng/Fish_2)
+* 仿百度贴吧Loading小球[BaiduWave](https://github.com/Jichensheng/BaiduWave)
+* 各种分布图控件[WilliamChart](https://github.com/diogobernardino/WilliamChart)
+* 仿微信拍照控件（轻触拍照，长按摄像）[CameraView](https://github.com/CJT2325/CameraView)
+* 老字号下拉刷新控件[android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
+* 如作者介绍：可添加样式&过滤器等生成各效果的ImageView[StyleImageView](https://github.com/chengdazhi/StyleImageView)
+* [android-advancedrecyclerview](https://github.com/h6ah4i/android-advancedrecyclerview)
+* [BottomBar](https://github.com/roughike/BottomBar)
+* 帮您快速实现跑马灯效果[MarqueeViewLibrary](https://github.com/gongwen/MarqueeViewLibrary)
+* [MarqueeView](https://github.com/sfsheng0322/MarqueeView)
+* [AndroidPileLayout](https://github.com/xmuSistone/AndroidPileLayout)
+* [ScalingLayout](https://github.com/iammert/ScalingLayout)
+* Android滚动选择控件[WheelView](https://github.com/wangjiegulu/WheelView)
+* A cool search view animation library[JJSearchViewAnim](https://github.com/android-cjj/JJSearchViewAnim)
+* 可搭配ViewPager相互控制的弹性动画View[BezierRoundView](https://github.com/RealMoMo/BezierRoundView)
+* 密码控件[PasswordInput](https://github.com/EthanCo/PasswordInput)
+* [TouchImageView](https://github.com/MikeOrtiz/TouchImageView)
+* [CircleProgress](https://github.com/MyLifeMyTravel/CircleProgress)
+* 很炫的LoadingView[AnimatedCircleLoadingView](https://github.com/jlmd/AnimatedCircleLoadingView)
+* [MagicCircle](https://github.com/DevinShine/MagicCircle)
+* [CircleSeekbar](https://github.com/feeeei/CircleSeekbar)
+* [CircleMenu](https://github.com/Hitomis/CircleMenu)
+* [CalendarView](https://github.com/huanghaibin-dev/CalendarView)
+* [FilterMenu](https://github.com/linroid/FilterMenu)
+* 我要说啥：Boom！ [BoomMenu](https://github.com/Nightonke/BoomMenu)
+* [CircularFloatingActionMenu](https://github.com/oguzbilgener/CircularFloatingActionMenu)
+* Tecent团队开发的UI库[QMUI_Android](https://github.com/QMUI/QMUI_Android)
+* [AnimatedPieView](https://github.com/razerdp/AnimatedPieView)
+* [BasePopup](https://github.com/razerdp/BasePopup)
+* 能添加阴影的ImageView,实测效果没作者项目那么好。[PaletteImageView](https://github.com/DingMouRen/PaletteImageView)
+* 可拖动，展示菜单，能自动吸边和半隐藏的悬浮球[FloatBall](https://github.com/huxq17/FloatBall)
+* 本人表示用不溜...[FlyoutMenus](https://github.com/ShamylZakariya/FlyoutMenus)
+* [BezierMaker](https://github.com/venshine/BezierMaker)
+* [CircleMenu](https://github.com/ImangazalievM/CircleMenu)
+* 颜色选择控件[colorpicker](https://github.com/QuadFlask/colorpicker)
+* Auto fit[android-autofittextview](https://github.com/grantland/android-autofittextview)
+* 水波纹[RippleEffect](https://github.com/traex/RippleEffect)
+* 富文本编辑[richeditor](https://github.com/wasabeef/richeditor-android)
+* 虽说star少，但真的不错[CircleLayout](https://github.com/nelson1110/CircleLayout)
+* 毛玻璃效果[RealtimeBlurView](https://github.com/mmin18/RealtimeBlurView)
+* [BGABanner](https://github.com/bingoogolapple/BGABanner-Android)
+* [FlycoTabLayout](https://github.com/H07000223/FlycoTabLayout)
+* B站开源的播放器[ijkplayer](https://github.com/Bilibili/ijkplayer)
+* 基于上面B站开发的[GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)
+* [AndroidPicturePicker](https://github.com/ValuesFeng/AndroidPicturePicker)
+* [PictureSelector](https://github.com/LuckSiege/PictureSelector)
+* 
+
+
+### Utils Class
+* [AndroidCommon](https://github.com/h4de5ing/AndroidCommon)
+* [AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)
+* [android-utils](https://github.com/jingle1267/android-utils)
+* 
 
 
 
