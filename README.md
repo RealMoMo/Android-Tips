@@ -20,6 +20,7 @@
 2.ImageView selector的默认图片item要放到最后。
 * 自定义progressbar seekbar ui样式。发现最后进度条的粗细和滑块一样大。请设置android:maxHeight&android:minHeight,这是指定进度条最大/小高度的（此高度并非SeekBar整个控件的高度）。
 * 了解与开发原生Setting[干货链接](http://blog.csdn.net/joychanger/article/details/51336527)
+* Android framework系统默认设置修改,主要是6.0以下版本[干货链接](https://blog.csdn.net/cbk861110/article/details/25216765)
 * 设置ScrollView始终显示滚动条
 ```
 android:scrollbars="vertical"
@@ -395,6 +396,37 @@ android.applicationVariants.all { variant ->
 
 }
 ```
+* 截屏
+```
+public static Bitmap screenShot(int width, int height) {
+		Class<?> demo = null;
+		Bitmap bitmap = null;
+		try {
+			demo = Class.forName("android.view.SurfaceControl");
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+		try {
+			Method method = demo.getMethod("screenshot", int.class, int.class);
+			Object obj = method.invoke(null, width, height);
+			bitmap = (Bitmap) obj;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return bitmap;
+	}
+```
+* Android推荐的数据结构:</br>
+ArrayMap<K,V> 替代 HashMap<K,V> </br>
+ArraySet<K,V> 替代 HashSet<K,V> </br>
+SparseArray<V> 替代 HashMap<Integer,V> </br>
+SparseBooleanArray 替代 HashMap<Integer,Boolean> </br>
+SparseIntArray 替代 HashMap<Integer,Integer> </br>
+SparseLongArray 替代 HashMap<Integer,Long> </br>
+LongSparseArray<V> 替代 HashMap<Long,V> </br>
+*
 
 ### Development tools
 * Git
@@ -404,6 +436,7 @@ android.applicationVariants.all { variant ->
 * 压缩图片资源利器:TinyPNG
 * CMD神器：cmder
 * 颜色吸管
+* 在线换算dp px sp等单位[Android Pixel Calculator](http://angrytools.com/android/pixelcalc/)
 
 //TODO update AS插件
 
@@ -468,7 +501,7 @@ android.applicationVariants.all { variant ->
 * [FilterMenu](https://github.com/linroid/FilterMenu)
 * 我要说啥：Boom！ [BoomMenu](https://github.com/Nightonke/BoomMenu)
 * [CircularFloatingActionMenu](https://github.com/oguzbilgener/CircularFloatingActionMenu)
-* Tecent团队开发的UI库[QMUI_Android](https://github.com/QMUI/QMUI_Android)
+* Tencent团队开发的UI库[QMUI_Android](https://github.com/QMUI/QMUI_Android)
 * [AnimatedPieView](https://github.com/razerdp/AnimatedPieView)
 * [BasePopup](https://github.com/razerdp/BasePopup)
 * 能添加阴影的ImageView,实测效果没作者项目那么好。[PaletteImageView](https://github.com/DingMouRen/PaletteImageView)
@@ -486,6 +519,7 @@ android.applicationVariants.all { variant ->
 * [FlycoTabLayout](https://github.com/H07000223/FlycoTabLayout)
 * B站开源的播放器[ijkplayer](https://github.com/Bilibili/ijkplayer)
 * 基于上面B站开发的[GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)
+* Airbnb精品库[lottie-android](https://github.com/airbnb/lottie-android)
 * [AndroidPicturePicker](https://github.com/ValuesFeng/AndroidPicturePicker)
 * [PictureSelector](https://github.com/LuckSiege/PictureSelector)
 * Animation effects to text, not really textview [HTextView](https://github.com/hanks-zyh/HTextView)
