@@ -175,6 +175,12 @@ case MotionEvent.ACTION_OUTSIDE:{
 }
 
 ```
+* Java内存分配机制</br>
+  ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/Java_memory_allocation_mechanism.png)</br>
+    </br>
+ ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/Jvm_memory_management.png)</br>
+    </br>
+ ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/Java_classification_of_references.png)</br>
 * Preference（不是SharedPreferences）的xml属性一定要给key属性。否则不会记录用户更新的数据。
 * Eclipse有时报64k方法问题，实际上远没到达64k方法数，我的解决方式：架包以外部形式引用。
 * Eclipse编译gc问题，我的解决方式：架包以外部形式引用;调整架包顺序。
@@ -426,7 +432,7 @@ SparseBooleanArray 替代 HashMap<Integer,Boolean> </br>
 SparseIntArray 替代 HashMap<Integer,Integer> </br>
 SparseLongArray 替代 HashMap<Integer,Long> </br>
 LongSparseArray<V> 替代 HashMap<Long,V> </br>
-*
+
 
 ### Development tools
 * Git
@@ -437,6 +443,7 @@ LongSparseArray<V> 替代 HashMap<Long,V> </br>
 * CMD神器：cmder
 * 颜色吸管
 * 在线换算dp px sp等单位[Android Pixel Calculator](http://angrytools.com/android/pixelcalc/)
+* IDE自定义主题[Color-themes](http://color-themes.com/?view=index)
 
 //TODO update AS插件
 
