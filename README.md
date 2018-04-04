@@ -379,7 +379,7 @@ defaultConfig {
 //4.显示依旧报错，但编译可以通过。
 ```
 * View类中的getDrawingCache()等一系列方法可以用于获取View显示的Bitmap对象。
-* ouchSlop，系统所能识别出的被认为是最小的滑动距离，ViewConfiguration.get(context).getScaledTouchSlop()。常用于自定义View。
+* TouchSlop，系统所能识别出的被认为是最小的滑动距离，ViewConfiguration.get(context).getScaledTouchSlop()。常用于自定义View。
 * Context的作用域</br>
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/context.png)
 * 修改Toast字体大小。
@@ -432,6 +432,51 @@ SparseBooleanArray 替代 HashMap<Integer,Boolean> </br>
 SparseIntArray 替代 HashMap<Integer,Integer> </br>
 SparseLongArray 替代 HashMap<Integer,Long> </br>
 LongSparseArray<V> 替代 HashMap<Long,V> </br>
+* UncaughtExceptionHandler接口，利用此接口可以对未捕获的异常善后。
+* ValueAnimator.reverse() 这个方法可以很顺利地取消正在运行的动画。
+* ViewParent.requestDisallowInterceptTouchEvent()——Android系统触摸事件机制大多时候能够默认处理，不过有时候你需要使用这个方法来剥夺父级控件的控制权。
+* 设置布局动画属性android:animateLayoutChanges="true",需要更炫的可以自定义动画添加android:layoutAnimation="@anim/your_animation"。
+```
+     <!--Button点击事件只是对TextView.setVisibility-->
+    <!--开启布局默认动画-->
+    <LinearLayout
+        android:animateLayoutChanges="true"    
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:text="666"
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="with Animation"
+            android:onClick="one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:text="666"
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="none Animation"
+            android:onClick="two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+```
+![](https://github.com/RealMoMo/Android-Tips/blob/master/img/animateLayoutChanges.gif)
 
 
 ### Development tools
