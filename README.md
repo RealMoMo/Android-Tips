@@ -477,6 +477,8 @@ LongSparseArray<V> 替代 HashMap<Long,V> </br>
     </LinearLayout>
 ```
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/animateLayoutChanges.gif)
+* 深入理解 Java 垃圾回收机制 -> [链接](http://www.importnew.com/16173.html)
+* Quick App 快应用[官方文档链接](https://www.quickapp.cn/)
 
 
 ### Development tools
@@ -487,8 +489,8 @@ LongSparseArray<V> 替代 HashMap<Long,V> </br>
 * 压缩图片资源利器:TinyPNG
 * CMD神器：cmder
 * 颜色吸管
-* 在线换算dp px sp等单位[Android Pixel Calculator](http://angrytools.com/android/pixelcalc/)
-* IDE自定义主题[Color-themes](http://color-themes.com/?view=index)
+* 在线换算dp px sp等单位 [Android Pixel Calculator](http://angrytools.com/android/pixelcalc/)
+* IDE自定义主题 [Color-themes](http://color-themes.com/?view=index)
 
 //TODO update AS插件
 
