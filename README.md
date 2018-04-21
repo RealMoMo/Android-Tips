@@ -479,7 +479,15 @@ LongSparseArray<V> 替代 HashMap<Long,V> </br>
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/animateLayoutChanges.gif)
 * 深入理解 Java 垃圾回收机制 -> [链接](http://www.importnew.com/16173.html)
 * Quick App 快应用[官方文档链接](https://www.quickapp.cn/)
-
+* TextView通过代码设置Drawable没显示图片？请添加以下代码
+```
+    Drawable drawable = drawable = getResources().getDrawable(R.drawable.wifi_active);
+    //important
+    drawable.setBounds(0,0,drawable.getMinimumWidth(),drawable.getMinimumHeight());
+    //该方法源码已说明The Drawables must already have had {@link Drawable#setBounds} called.
+    tvWiFi.setCompoundDrawables(null,drawable,null,null);
+```
+* 初级入门JNI开发的[专题](https://www.jianshu.com/c/a25bf14495d7)
 
 ### Development tools
 * Git
