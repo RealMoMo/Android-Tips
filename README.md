@@ -488,18 +488,61 @@ LongSparseArray<V> 替代 HashMap<Long,V> </br>
     tvWiFi.setCompoundDrawables(null,drawable,null,null);
 ```
 * 初级入门JNI开发的[专题](https://www.jianshu.com/c/a25bf14495d7)
+* 底层支持多用户，需设置的系统属性
+```
+setprop fw.max_users 8  
+setprop fw.show_multiuserui true 
+```
+* setBackgroundResource(0) 可以移除 View 的背景色
+* 如果想把一个view保存为Bitmap，正常情况下用第一种方法就可以了，但是如果是ScrollView，则必须采用第二种方法。
+```
+//方法一:
+public Bitmap createViewBitmap(View v) {  
+    Bitmap bitmap = Bitmap.createBitmap(v.getWidth(), v.getHeight(),  
+            Bitmap.Config.ARGB_8888);  
+    Canvas canvas = new Canvas(bitmap);  
+    v.draw(canvas);  
+    return bitmap;  
+} 
+
+//方法二:
+    /**
+     * 截取scrollview的屏幕
+     * @param scrollView
+     * @return
+     */
+    public static Bitmap getBitmapByView(ScrollView scrollView) {
+        int h = 0;
+        Bitmap bitmap = null;
+        // 获取scrollview实际高度
+        for (int i = 0; i < scrollView.getChildCount(); i++) {
+            h += scrollView.getChildAt(i).getHeight();
+            scrollView.getChildAt(i).setBackgroundColor(
+                    Color.parseColor("#ffffff"));
+        }
+        // 创建对应大小的bitmap
+        bitmap = Bitmap.createBitmap(scrollView.getWidth(), h,
+                Bitmap.Config.RGB_565);
+        final Canvas canvas = new Canvas(bitmap);
+        scrollView.draw(canvas);
+        return bitmap;
+    }
+```
+* Android6.0之后getResources().getColor()方法被废弃了，大家可以用ContextCompat.getColor(context, R.color.color_name)替换，ContextCompat是v4包里的，请放心使用，另外还有getDrawable()等方法。
 
 ### Development tools
 * Git
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
 * 代码对比：Beyond compare
-* 压缩图片资源利器:TinyPNG
+* 压缩图片资源利器:[TinyPNG](https://tinypng.com/)
 * CMD神器：cmder
 * 颜色吸管
 * 在线换算dp px sp等单位 [Android Pixel Calculator](http://angrytools.com/android/pixelcalc/)
 * IDE自定义主题 [Color-themes](http://color-themes.com/?view=index)
-
+*  [腾讯文档](https://docs.qq.com/)
+*  可视化插值器[interpolator](http://inloop.github.io/interpolator/)
+ 
 //TODO update AS插件
 
 ### CutsomView
