@@ -490,8 +490,16 @@ LongSparseArray<V> 替代 HashMap<Long,V> </br>
 * 初级入门JNI开发的[专题](https://www.jianshu.com/c/a25bf14495d7)
 * 底层支持多用户，需设置的系统属性
 ```
+//method 1:
 setprop fw.max_users 8  
 setprop fw.show_multiuserui true 
+
+//method 2:
+//配置多用户：
+
+// /frameworks/base/core/res/res/values/config.xml
+//修改其中的config_multiuserMaximumUsers的值为4 （看要支持几个用户）
+//修改之后，设置中能看到用户这个菜单，而不是本来就有的账户。
 ```
 * setBackgroundResource(0) 可以移除 View 的背景色
 * 如果想把一个view保存为Bitmap，正常情况下用第一种方法就可以了，但是如果是ScrollView，则必须采用第二种方法。
