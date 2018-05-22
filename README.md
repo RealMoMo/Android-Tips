@@ -540,6 +540,7 @@ public Bitmap createViewBitmap(View v) {
 
 ### Development tools
 * Git
+* adb
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
 * 代码对比：Beyond compare
@@ -550,6 +551,7 @@ public Bitmap createViewBitmap(View v) {
 * IDE自定义主题 [Color-themes](http://color-themes.com/?view=index)
 *  [腾讯文档](https://docs.qq.com/)
 *  可视化插值器[interpolator](http://inloop.github.io/interpolator/)
+*  [Android SVG to VectorDrawable](http://inloop.github.io/svg2android/)
  
 //TODO update AS插件
 
