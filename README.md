@@ -537,6 +537,11 @@ public Bitmap createViewBitmap(View v) {
     }
 ```
 * Android6.0之后getResources().getColor()方法被废弃了，大家可以用ContextCompat.getColor(context, R.color.color_name)替换，ContextCompat是v4包里的，请放心使用，另外还有getDrawable()等方法。
+* 实现Android一键锁屏 [传送门](http://www.cnblogs.com/chenyg32/p/3719714.html)
+* 另一种通过广播方式，触发锁屏并且不会熄屏。测试环境原生Android5.0可以，6.0以上不可以。
+```
+adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DELAYED_KEYGUARD  --ei 'seq' 1
+```
 
 ### Development tools
 * Git
