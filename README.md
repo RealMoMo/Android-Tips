@@ -541,7 +541,9 @@ public Bitmap createViewBitmap(View v) {
 * 另一种通过广播方式，触发锁屏并且不会熄屏。测试环境原生Android5.0可以，6.0以上不可以。
 ```
 adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DELAYED_KEYGUARD  --ei 'seq' 1
+//seq 具体值看实际情况通常是1
 ```
+* 展示时间用TextClock控件，支持多种格式设置与自动刷新。(以前公司老项目，用TextView加Handler做 哈哈~~~)
 
 ### Development tools
 * Git
