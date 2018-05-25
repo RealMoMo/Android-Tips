@@ -543,7 +543,7 @@ public Bitmap createViewBitmap(View v) {
 adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DELAYED_KEYGUARD  --ei 'seq' 1
 //seq 具体值看实际情况通常是1
 ```
-* 展示时间用TextClock控件，支持多种格式设置与自动刷新。(以前公司老项目，用TextView加Handler做 哈哈~~~)
+* 展示时间用TextClock控件，计时用Chronometer控件。(往往很容易忽略Date&Time的原生控件)
 
 ### Development tools
 * Git
