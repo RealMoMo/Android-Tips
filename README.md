@@ -544,6 +544,10 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 //seq 具体值看实际情况通常是1
 ```
 * 展示时间用TextClock控件，计时用Chronometer控件。(往往很容易忽略Date&Time的原生控件)
+* 入门了解与学习InstantApp系列 [链接](https://segmentfault.com/a/1190000011648067)
+* Deep Links和App Links的对比
+</br>![](https://github.com/RealMoMo/Android-Tips/blob/master/img/deeplines_applinks.jpg)
+
 
 ### Development tools
 * Git
