@@ -547,6 +547,7 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 * 入门了解与学习InstantApp系列 [链接](https://segmentfault.com/a/1190000011648067)
 * Deep Links和App Links的对比
 </br>![](https://github.com/RealMoMo/Android-Tips/blob/master/img/deeplines_applinks.jpg)
+* 对Constraint Layout执行漂亮的动画用[ConstraintSet](https://juejin.im/entry/58b2fd59570c350069704265?utm_source=gold-miner&utm_medium=readme&utm_campaign=github)
 
 
 ### Development tools
