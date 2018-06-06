@@ -592,6 +592,8 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 
     }
 ```
+* CameraView适配建议
+<br/>![](https://github.com/RealMoMo/Android-Tips/blob/master/img/cameraview.png)
 
 
 
