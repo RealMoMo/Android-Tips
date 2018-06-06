@@ -147,6 +147,28 @@ Intent intent= new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
     sendBroadcast(intent);
 ```
 * 应用可以监听home键，通过广播。噢！还必须是动态广播。而且是不能拦截Home键，除非改底层。
+```
+//广播监听Home,并不能拦截Home键
+
+//register
+registerReceiver(mHomeKeyEventReceiver, new IntentFilter(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
+//unregister
+unregisterReceiver(mHomeKeyEventReceiver);
+
+//init broadcastreceiver
+ private BroadcastReceiver mHomeKeyEventReceiver = new BroadcastReceiver() {
+        String SYSTEM_REASON = "reason";
+        String SYSTEM_HOME_KEY = "homekey";
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			String action = intent.getAction();
+			if (action.equals(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)) {
+				//TODO your task
+			}
+		}
+	};
+```
 * 设置系统语言。
 ```
 //设置英语为系统语言
