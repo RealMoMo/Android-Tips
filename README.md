@@ -620,7 +620,7 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 <br/>![](https://github.com/RealMoMo/Android-Tips/blob/master/img/cameraview.png)
 * 监听时间的广播需动态注册
 * Intent.ACTION_DATE_CHANGED不广播的原因:已经广播过的日期改变，就不会再广播了，比如时间设置了2012-04-20 23：59， 到了2012-04-21 00：00的时候有该广播，但再把时间调回到2012-04-20 23：59甚至是更久以前，是不会有该广播了，除非把时间调到未来，也就是还没有广播的时间，如2012-04-21 23：59，才会继续有该广播。
-* CoordinatorLayout的Behavior，原生自带的有:BottomSheetBehavior,HeaderBehavior,HeaderScrollingViewBehavior,ViewOffsetBehavior。更复杂的需求，需![自定义Behavior](https://blog.csdn.net/yanzhenjie1003/article/details/51946749)
+* CoordinatorLayout的Behavior，原生自带的有:BottomSheetBehavior,HeaderBehavior,HeaderScrollingViewBehavior,ViewOffsetBehavior。更复杂的需求，需[自定义Behavior](https://blog.csdn.net/yanzhenjie1003/article/details/51946749)
 * View滑动方式：1.layout方法 2.offsetLeftAndRight & offsetTopAndBottom方法 3.LayoutParams 4.Animation 5.scrolltTo || scrollBy 6.Scroller 7.ViewDragHelper
 * 在Java的try、catch、finally中,try是必须的,catch和finally都不是必须的。
 * Java提供的7种阻塞队列是:(常应用于生产者和消费者，如线程池。)
