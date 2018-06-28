@@ -5,6 +5,8 @@
 内容是我自己平时学习与工作积累的代码与准则，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
 
 ### Tips
+* [框架源码分析]()  待更新
+* [adb常用调试命令]() 待更新
 * Android Tools命名空间原来是有大用处的。大致有三种主要功能：</br>
   xml中的错误处理</br>
   xml 预览</br>
@@ -621,6 +623,14 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 * CoordinatorLayout的Behavior，原生自带的有:BottomSheetBehavior,HeaderBehavior,HeaderScrollingViewBehavior,ViewOffsetBehavior。更复杂的需求，需![自定义Behavior](https://blog.csdn.net/yanzhenjie1003/article/details/51946749)
 * View滑动方式：1.layout方法 2.offsetLeftAndRight & offsetTopAndBottom方法 3.LayoutParams 4.Animation 5.scrolltTo || scrollBy 6.Scroller 7.ViewDragHelper
 * 在Java的try、catch、finally中,try是必须的,catch和finally都不是必须的。
+* Java提供的7种阻塞队列是:(常应用于生产者和消费者，如线程池。)
+</br>ArrayBlockingQueue ：一个由数组结构组成的有界阻塞队列。
+</br>LinkedBlockingQueue ：一个由链表结构组成的有界阻塞队列。
+</br>PriorityBlockingQueue ：一个支持优先级排序的无界阻塞队列。
+</br>DelayQueue：一个使用优先级队列实现的无界阻塞队列。
+</br>SynchronousQueue：一个不存储元素的阻塞队列。
+</br>LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
+</br>LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
 
 
 
