@@ -648,6 +648,8 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 *  [腾讯文档](https://docs.qq.com/)
 *  可视化插值器[interpolator](http://inloop.github.io/interpolator/)
 *  [Android SVG to VectorDrawable](http://inloop.github.io/svg2android/)
+* [有道云笔记](https://note.youdao.com)构建自己的笔记系统
+* 神器[Vysor](http://www.vysor.io/)PC操作Android设备
  
 //TODO update AS插件
 
