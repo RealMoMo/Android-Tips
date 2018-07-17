@@ -637,11 +637,14 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 * 语言适配，请把相应的默认语言加上。
 ```code
 例如：
-zh-rCN
-zh-rHK
-zh-rTW
+values-zh-rCN
+values-zh-rHK
 请补上
-zh
+values-zh
+(
+why? 
+避免有些是设置values-zh-rTW，若没有对应相应适配。会优先匹配values-zh,再没有才匹配values。
+)
 ```
 
 
