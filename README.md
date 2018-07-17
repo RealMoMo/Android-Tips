@@ -631,6 +631,19 @@ adb shell am broadcast -a com.android.internal.policy.impl.PhoneWindowManager.DE
 </br>SynchronousQueue：一个不存储元素的阻塞队列。
 </br>LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
 </br>LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
+* 善用Android Studio中的'favorites'和'bookmark'功能
+* 注解语法说明图</br>
+![](https://github.com/RealMoMo/Android-Tips/blob/master/img/annotation_grammer.png)
+* 语言适配，请把相应的默认语言加上。
+```code
+例如：
+zh-rCN
+zh-rHK
+zh-rTW
+请补上
+zh
+```
+
 
 
 
