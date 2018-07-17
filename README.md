@@ -666,6 +666,9 @@ why?
 *  [Android SVG to VectorDrawable](http://inloop.github.io/svg2android/)
 * [有道云笔记](https://note.youdao.com)构建自己的笔记系统
 * 神器[Vysor](http://www.vysor.io/)PC操作Android设备
+* Fiddler抓包工具
+* Source Insight
+* [Track TopActivity](https://github.com/109021017/android-TopActivity)
  
 //TODO update AS插件
 
