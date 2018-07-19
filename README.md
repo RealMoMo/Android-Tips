@@ -646,6 +646,11 @@ why?
 避免有些是设置values-zh-rTW，若没有对应相应适配。会优先匹配values-zh,再没有才匹配values。
 )
 ```
+* Intent.FLAG_EXCLUDE_STOPPED_PACKAGES：
+如果设置该属性，广播只会发送给已经开启的应用</br>
+Intent.FLAG_INCLUDE_STOPPED_PACKAGES
+如果设置该属性，广播会发送给所有的应用</br>
+当然，系统默认是添加Intent.FLAG_EXCLUDE_STOPPED_PACKAGES属性
 
 
 
@@ -669,6 +674,8 @@ why?
 * Fiddler抓包工具
 * Source Insight
 * [Track TopActivity](https://github.com/109021017/android-TopActivity)
+* Icon库</br>
+[阿里巴巴矢量图标库](http://www.iconfont.cn/plus)</br> [IcoMoon](https://icomoon.io/app/#/select)</br> [Flaticon](https://www.flaticon.com/)
  
 //TODO update AS插件
 
