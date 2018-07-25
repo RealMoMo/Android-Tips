@@ -651,6 +651,23 @@ why?
 Intent.FLAG_INCLUDE_STOPPED_PACKAGES
 如果设置该属性，广播会发送给所有的应用</br>
 当然，系统默认是添加Intent.FLAG_EXCLUDE_STOPPED_PACKAGES属性
+* 常用drawalbe-selector。但还有一个color-selector，常应用android:textColor。
+```
+//1.建color文件夹 res/color/
+//2.建color-selector文件，color_test_selector.xml
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="@color/system_color" />
+    <item android:state_focused="true" android:color="@color/system_color" />
+    <item android:color="@color/color_white_light" />
+</selector>
+//3.应用
+//3.1布局中的应用
+android:textColor="@color/color_test_selector"
+//3.2代码中的应用
+textView.setTextColor(getResources().getColorStateList(R.color.color_test_selector));
+```
 
 
 
