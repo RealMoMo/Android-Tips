@@ -5,8 +5,8 @@
 内容是我自己平时学习与工作积累的代码与准则，并没有什么原理剖析。如有错误欢迎指正,如有侵权,请联系我删除。
 
 ### Tips
-* [框架源码分析]()  待更新
-* [adb常用调试命令]() 待更新
+* [框架源码分析]()  TODO待更新
+* [adb常用调试命令]() TODO待更新
 * Android Tools命名空间原来是有大用处的。大致有三种主要功能：</br>
   xml中的错误处理</br>
   xml 预览</br>
@@ -668,6 +668,28 @@ android:textColor="@color/color_test_selector"
 //3.2代码中的应用
 textView.setTextColor(getResources().getColorStateList(R.color.color_test_selector));
 ```
+* 动态设置控件id
+```
+//method1: 
+TextView tv = new TextView(this);
+int id = View.generateViewId();//api>=17
+tv.setId(id);
+
+//method2:
+//2.1在values中创建ids.xml文件
+//2.2文件内容：
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="circle_centerview" type="id" />
+
+</resources>
+
+//2.3代码中使用
+TextView tv = new TextView(this);
+tv.setId(R.id.circle_centerview);
+
+```
 
 
 
@@ -693,8 +715,9 @@ textView.setTextColor(getResources().getColorStateList(R.color.color_test_select
 * [Track TopActivity](https://github.com/109021017/android-TopActivity)
 * Icon库</br>
 [阿里巴巴矢量图标库](http://www.iconfont.cn/plus)</br> [IcoMoon](https://icomoon.io/app/#/select)</br> [Flaticon](https://www.flaticon.com/)
+* 思维导图Xmind
  
-//TODO update AS插件
+//TODO add AS插件介绍
 
 ### CutsomView
 * Google推出的[FlexboxLayout](https://github.com/google/flexbox-layout)
