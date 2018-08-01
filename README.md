@@ -690,6 +690,7 @@ TextView tv = new TextView(this);
 tv.setId(R.id.circle_centerview);
 
 ```
+* 图像渲染利器RenderScript
 
 
 
