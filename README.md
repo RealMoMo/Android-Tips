@@ -691,6 +691,9 @@ tv.setId(R.id.circle_centerview);
 
 ```
 * 图像渲染利器RenderScript
+* 简易的视图切换ViewAnimator及其子类</br>
+![](https://github.com/RealMoMo/Android-Tips/blob/master/img/ViewAnimator.png)
+* 继承AbstractProcessor处理编译时注解代码。要建Java工程，Android工程目前不可以直接使用。
 
 
 
