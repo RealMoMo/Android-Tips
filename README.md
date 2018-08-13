@@ -694,6 +694,84 @@ tv.setId(R.id.circle_centerview);
 * 简易的视图切换ViewAnimator及其子类</br>
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/ViewAnimator.png)
 * 继承AbstractProcessor处理编译时注解代码。要建Java工程，Android工程目前不可以直接使用。
+* 获取外部存储设备的路径。
+```
+//method1 还包含内部存储路径（需自行过滤）
+private String[] getStoragePaths(Context context) {
+
+        StorageManager storageManager = (StorageManager) context
+                .getSystemService(Context.STORAGE_SERVICE);
+
+        List<String> pathsList = new ArrayList<String>();
+        try {
+            Class<?>[] paramClasses = {};
+            Method getVolumeList = StorageManager.class.getMethod("getVolumeList", paramClasses);
+            Object[] params = {};
+            Object[] invokes = (Object[]) getVolumeList.invoke(storageManager, params);
+            if (invokes != null) {
+
+                for (int i = 0; i < invokes.length; i++) {
+                    Object obj = invokes[i];
+                    Method getPath = obj.getClass().getMethod("getPath", new Class[0]);
+                    String path = (String) getPath.invoke(obj, new Object[0]);
+                   pathsList.add(path);
+                   
+                   //realmo add test usb label
+                    Method getUserLabel = obj.getClass().getMethod("getUserLabel",new Class[0]);
+                    String lable = (String) getUserLabel.invoke(obj,new Object[0]);
+                    Log.d("realmo","label:"+lable);
+                    Log.d("realmo","path:"+path);
+                            
+
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+        return pathsList.toArray(new String[pathsList.size()]);
+    }
+    
+   
+//method2
+private String[] getStoragePaths(Context context) {   
+        List<String> pathsList = new ArrayList<String>();
+
+        StorageManager storageManager = (StorageManager) cxt
+                .getSystemService(Context.STORAGE_SERVICE);
+        try {
+		    Method method = StorageManager.class
+                    .getDeclaredMethod("getVolumePaths");
+            method.setAccessible(true);
+            Object result = method.invoke(storageManager);
+            if (result != null && result instanceof String[]) {
+                String[] pathes = (String[]) result;
+                StatFs statFs;
+                for (String path : pathes) {
+
+                    if (!TextUtils.isEmpty(path) && new File(path).exists()) {
+                        statFs = new StatFs(path);
+                        if (statFs.getBlockCount() * statFs.getBlockSize() != 0) {
+                            if (path.contains("/sdcard"))
+                                continue;
+                            pathsList.add(path);
+                        }
+                    }
+                }
+            }
+       } catch (Exception e) {
+            e.printStackTrace();
+            File externalFolder = Environment.getExternalStorageDirectory();
+            if (externalFolder != null) {
+                pathsList.add(externalFolder.getAbsolutePath());
+            }
+        }        
+		
+		return pathsList.toArray(new String[pathsList.size()]);
+    }
+```
 
 
 
