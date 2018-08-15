@@ -799,7 +799,17 @@ private String[] getStoragePaths(Context context) {
 [阿里巴巴矢量图标库](http://www.iconfont.cn/plus)</br> [IcoMoon](https://icomoon.io/app/#/select)</br> [Flaticon](https://www.flaticon.com/)
 * 思维导图Xmind
  
-//TODO add AS插件介绍
+
+###  IDE plugin
+* [CodeGlance](https://github.com/Vektah/CodeGlance)可用于快速定位代码，类似于Sublime编辑器右侧定位视图。
+* [Alibaba java编码规约插件](https://github.com/alibaba/p3c)
+* [GsonFormat](https://github.com/zzz40500/GsonFormat)将JSON格式数据解析成实体
+* [ButterKnifeZelezny](https://github.com/avast/android-butterknife-zelezny)通过注解，省略findViewById等其他设置
+* [Android Studio Prettify](https://github.com/Haehnchen/idea-android-studio-plugin)自动生成findViewById
+* Android Parcelable code generator & Android Parcelable code  generator(for kotlin) 自动生成Parcelable接口对应的实现代码
+* [Gradle Dependencies Helper](https://github.com/siosio/GradleDependenciesHelperPlugin)maven gradle 依赖支持自动补全
+* [GradleDependenciesAndPluginsHelper](https://github.com/bestwu/gradle-dependencies-plugins-helper-plugin)一样支持gradle 依赖自动补全
+
 
 ### CutsomView
 * Google推出的[FlexboxLayout](https://github.com/google/flexbox-layout)
