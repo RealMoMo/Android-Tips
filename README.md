@@ -772,7 +772,16 @@ private String[] getStoragePaths(Context context) {
 		return pathsList.toArray(new String[pathsList.size()]);
     }
 ```
-
+* 复制数组  System.arraycopy(Object src,  int  srcPos,Object dest, int destPos,int length);
+* 获取前台Activity的包名类名
+```
+	private String getForegroundActivity(){
+		ActivityManager am = (ActivityManager) mContext
+				.getSystemService(android.content.Context.ACTIVITY_SERVICE);
+		List<RunningTaskInfo> lst = am.getRunningTasks(1);
+		return lst.get(0).topActivity.flattenToString();
+	}
+```
 
 
 
@@ -801,14 +810,14 @@ private String[] getStoragePaths(Context context) {
  
 
 ###  IDE plugin
-* [CodeGlance](https://github.com/Vektah/CodeGlance)可用于快速定位代码，类似于Sublime编辑器右侧定位视图。
+* [CodeGlance](https://github.com/Vektah/CodeGlance)   可用于快速定位代码，类似于Sublime编辑器右侧定位视图。
 * [Alibaba java编码规约插件](https://github.com/alibaba/p3c)
-* [GsonFormat](https://github.com/zzz40500/GsonFormat)将JSON格式数据解析成实体
-* [ButterKnifeZelezny](https://github.com/avast/android-butterknife-zelezny)通过注解，省略findViewById等其他设置
-* [Android Studio Prettify](https://github.com/Haehnchen/idea-android-studio-plugin)自动生成findViewById
-* Android Parcelable code generator & Android Parcelable code  generator(for kotlin) 自动生成Parcelable接口对应的实现代码
-* [Gradle Dependencies Helper](https://github.com/siosio/GradleDependenciesHelperPlugin)maven gradle 依赖支持自动补全
-* [GradleDependenciesAndPluginsHelper](https://github.com/bestwu/gradle-dependencies-plugins-helper-plugin)一样支持gradle 依赖自动补全
+* [GsonFormat](https://github.com/zzz40500/GsonFormat)   将JSON格式数据解析成实体
+* [ButterKnifeZelezny](https://github.com/avast/android-butterknife-zelezny)   通过注解，省略findViewById等其他设置
+* [Android Studio Prettify](https://github.com/Haehnchen/idea-android-studio-plugin)   自动生成findViewById
+* Android Parcelable code generator & Android Parcelable code  generator(for kotlin)       自动生成Parcelable接口对应的实现代码
+* [Gradle Dependencies Helper](https://github.com/siosio/GradleDependenciesHelperPlugin)   maven gradle 依赖支持自动补全
+* [GradleDependenciesAndPluginsHelper](https://github.com/bestwu/gradle-dependencies-plugins-helper-plugin)   一样支持gradle 依赖自动补全
 
 
 ### CutsomView
