@@ -782,6 +782,9 @@ private String[] getStoragePaths(Context context) {
 		return lst.get(0).topActivity.flattenToString();
 	}
 ```
+* View.BaseSaveState 保存View状态
+* 监听App所有Activity的生命周期，实现Application.ActivityLifecycleCallbacks接口即可
+
 
 
 
