@@ -6,7 +6,7 @@
 
 ### Tips
 * [框架源码分析]()  TODO待更新
-* [adb常用调试命令]() TODO待更新
+* [adb常用调试命令](https://github.com/RealMoMo/Android-Tips/blob/master/adb.md) 
 * Android Tools命名空间原来是有大用处的。大致有三种主要功能：</br>
   xml中的错误处理</br>
   xml 预览</br>
@@ -784,9 +784,8 @@ private String[] getStoragePaths(Context context) {
 ```
 * View.BaseSaveState 保存View状态
 * 监听App所有Activity的生命周期，实现Application.ActivityLifecycleCallbacks接口即可
-
-
-
+* 加载大图，局部显示,了解下BitmapRegionDecoder
+* 干货---[Android 屏幕绘制机制及硬件加速](https://blog.csdn.net/qian520ao/article/details/81144167)
 
 ### Development tools
 * Git
