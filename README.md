@@ -786,6 +786,7 @@ private String[] getStoragePaths(Context context) {
 * 监听App所有Activity的生命周期，实现Application.ActivityLifecycleCallbacks接口即可
 * 加载大图，局部显示,了解下BitmapRegionDecoder
 * 干货---[Android 屏幕绘制机制及硬件加速](https://blog.csdn.net/qian520ao/article/details/81144167)
+* [Android各类型动画总结](https://github.com/OCNYang/Android-Animation-Set)
 
 ### Development tools
 * Git
@@ -820,6 +821,7 @@ private String[] getStoragePaths(Context context) {
 * Android Parcelable code generator & Android Parcelable code  generator(for kotlin)       自动生成Parcelable接口对应的实现代码
 * [Gradle Dependencies Helper](https://github.com/siosio/GradleDependenciesHelperPlugin)   maven gradle 依赖支持自动补全
 * [GradleDependenciesAndPluginsHelper](https://github.com/bestwu/gradle-dependencies-plugins-helper-plugin)   一样支持gradle 依赖自动补全
+* [TranslationPlugin](https://github.com/YiiGuxing/TranslationPlugin) 翻译插件
 
 
 ### CutsomView
