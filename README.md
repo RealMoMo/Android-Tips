@@ -141,12 +141,32 @@ VolumeObserver  mVolObserver = new VolumeObserver(mContext.getContentResolver())
 ```
 mHandlerThread.getLooper().quit();
 ```
-* 保存&删除图片并通知系统相册刷新。
+* 保存图片并通知系统相册刷新。
 ```
 Intent intent= new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
    // 最后通知图库更新
     intent.setData(Uri.fromFile(file));
     sendBroadcast(intent);
+```
+* 删除图片并通知系统相册刷新。
+```
+    private void notifyFileSystemChanged(String filePath) {
+        if (filePath == null){
+            return;
+        }
+        File f = new File(filePath);
+        Intent intent;
+        if (f.isDirectory()) {
+            intent = new Intent(Intent.ACTION_MEDIA_MOUNTED);
+            intent.setClassName("com.android.providers.media", "com.android.providers.media.MediaScannerReceiver");
+            intent.setData(Uri.fromFile(Environment.getExternalStorageDirectory()));
+        } else {
+            //test not work in some devices
+            intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            intent.setData(Uri.fromFile(new File(path)));
+        }
+        context.sendBroadcast(intent);
+    }
 ```
 * 应用可以监听home键，通过广播。噢！还必须是动态广播。而且是不能拦截Home键，除非改底层。
 ```
@@ -787,6 +807,7 @@ private String[] getStoragePaths(Context context) {
 * 加载大图，局部显示,了解下BitmapRegionDecoder
 * 干货---[Android 屏幕绘制机制及硬件加速](https://blog.csdn.net/qian520ao/article/details/81144167)
 * [Android各类型动画总结](https://github.com/OCNYang/Android-Animation-Set)
+* StackTraceElement实现自己日志输出
 
 ### Development tools
 * Git
