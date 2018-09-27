@@ -808,6 +808,16 @@ private String[] getStoragePaths(Context context) {
 * 干货---[Android 屏幕绘制机制及硬件加速](https://blog.csdn.net/qian520ao/article/details/81144167)
 * [Android各类型动画总结](https://github.com/OCNYang/Android-Animation-Set)
 * StackTraceElement实现自己日志输出
+* 隐式启动判断是否有匹配Intent的Activity  Intent.resolveActivity方法
+```
+Intent intent = new Intent(LOCK_SCREEN_ACTIVITY_NAME);
+        //判断是否存在
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }else{
+
+        }
+```
 
 ### Development tools
 * Git
