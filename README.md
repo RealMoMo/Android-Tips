@@ -818,10 +818,12 @@ Intent intent = new Intent(LOCK_SCREEN_ACTIVITY_NAME);
 
         }
 ```
+* [深入理解Android插件化技术](https://zhuanlan.zhihu.com/p/33017826)  以及[Demo](https://github.com/vimerzhao/PluginDemo)
 
 ### Development tools
 * Git
 * adb
+* aapt
 * 如何录制Demo运行的gif。用GifCam、FFmpeg都可以视频转gif。
 * Genymotion不解释
 * 代码对比：Beyond compare
