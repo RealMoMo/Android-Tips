@@ -855,6 +855,10 @@ Intent intent = new Intent(LOCK_SCREEN_ACTIVITY_NAME);
 * [Gradle Dependencies Helper](https://github.com/siosio/GradleDependenciesHelperPlugin)   maven gradle 依赖支持自动补全
 * [GradleDependenciesAndPluginsHelper](https://github.com/bestwu/gradle-dependencies-plugins-helper-plugin)   一样支持gradle 依赖自动补全
 * [TranslationPlugin](https://github.com/YiiGuxing/TranslationPlugin) 翻译插件
+* [AndroidLocalizationer](https://github.com/westlinkin/AndroidLocalizationer)翻译对应各国String资源
+* [AndroidLocalizePlugin](https://github.com/Airsaid/AndroidLocalizePlugin)也是翻译对应各国String资源
+* [JsonToKotlinClass ](https://github.com/wuseal/JsonToKotlinClass)
+* [Android Resource Usage Count](https://github.com/niorgai/Android-Resource-Usage-Count)
 
 
 ### CutsomView
