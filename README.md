@@ -819,6 +819,13 @@ Intent intent = new Intent(LOCK_SCREEN_ACTIVITY_NAME);
         }
 ```
 * [深入理解Android插件化技术](https://zhuanlan.zhihu.com/p/33017826)  以及[Demo](https://github.com/vimerzhao/PluginDemo)
+* ExifInterface 获取&设置图片信息
+* 乘&除2的次方量级，请用效率更好的位运算符 
+```
+<<  :    左移运算符，num << 1,相当于num乘以2  
+
+>>  :    右移运算符，num >> 1,相当于num除以2
+```
 
 ### Development tools
 * Git
