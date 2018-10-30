@@ -826,6 +826,35 @@ Intent intent = new Intent(LOCK_SCREEN_ACTIVITY_NAME);
 
 >>  :    右移运算符，num >> 1,相当于num除以2
 ```
+* WebView的内存泄露问题,主要以下两种解决方案。</br>
+1.独立进程法</br>
+独立进程法顾名思义是让包含WebView的Acitivy以android:process=":web"的形式指定单独进程，然后在需要退出的时候使用System.exit(0)结束整个进程，内存自然回收了。该方法简单暴力，并有以下优点</br>
+1.1.每个独立的进程都能分配独立的内存，这样的话，你的app可以获得双倍的内存，其中一半给Webview吃。增大Webview获得的内存，变相的减小内存泄露产生OOM的概率。</br>
+1.2.在适当时机直接杀掉Webview独立进程，什么内存泄露，内存占用巨大的问题都见鬼去吧。要问什么时机？比如退出app时，检测到没有Webview页面时。</br>
+1.3.Webview发生崩溃时不会导致app闪退，就像第二点说的，因为Webview是在独立进程中，如果发生崩溃，主进程还安然无事，app还在运行中，没有闪退，不闪的才是健康的。</br>
+</br>2.源码解决法</br>
+从源码得知， WebView.destroy()方法的执行时间在onDetachedFromWindow之前，所以就会导致不能正常进行unregister()，从而造成内存泄露。
+```
+//在Activity的onDestroy里方法里如下代码
+@Override
+protected void onDestroy() {
+   if (mWebView != null) {
+            try {
+                ViewGroup parent = (ViewGroup) mWebView.getParent();
+                if (parent != null) {
+                    parent.removeView(mWebView);
+                }
+                mWebView.removeAllViews();
+                mWebView.destroy();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        super.onDestroy();
+}
+```
+
 
 ### Development tools
 * Git
