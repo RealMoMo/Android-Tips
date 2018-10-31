@@ -879,6 +879,7 @@ protected void onDestroy() {
 * Icon库</br>
 [阿里巴巴矢量图标库](http://www.iconfont.cn/plus)</br> [IcoMoon](https://icomoon.io/app/#/select)</br> [Flaticon](https://www.flaticon.com/)
 * 思维导图Xmind
+* MarkDown编辑器[typora](https://www.typora.io/)
  
 
 ###  IDE plugin
