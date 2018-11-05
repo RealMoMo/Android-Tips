@@ -880,6 +880,8 @@ protected void onDestroy() {
 [阿里巴巴矢量图标库](http://www.iconfont.cn/plus)</br> [IcoMoon](https://icomoon.io/app/#/select)</br> [Flaticon](https://www.flaticon.com/)
 * 思维导图Xmind
 * MarkDown编辑器[typora](https://www.typora.io/)
+* 网络接口测试神器[Postman](https://www.getpostman.com/)
+* 支持在线录制屏幕[Showmore](https://showmore.com/zh/)
  
 
 ###  IDE plugin
