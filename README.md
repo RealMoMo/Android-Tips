@@ -854,6 +854,22 @@ protected void onDestroy() {
         super.onDestroy();
 }
 ```
+* Gradle 配置生成jar
+```
+//task to delete the old jar
+task deleteOldJar(type: Delete) {
+    delete 'release/your jar name.jar'
+}
+
+//task to export contents as jar
+task exportJar(type: Copy) {
+    from('build/intermediates/packaged-classes/release/')
+    into('release/')
+    include('classes.jar')
+    ///Rename the jar
+    rename('classes.jar', 'your jar name.jar')
+}
+```
 
 
 ### Development tools
