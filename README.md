@@ -21,8 +21,10 @@
 <br>1.ImageView要加上clickable="true"，不然它的selector 是不会有效果。</br>
 2.ImageView selector的默认图片item要放到最后。
 * 自定义progressbar seekbar ui样式。发现最后进度条的粗细和滑块一样大。请设置android:maxHeight&android:minHeight,这是指定进度条最大/小高度的（此高度并非SeekBar整个控件的高度）。
-* 了解与开发原生Setting[干货链接](http://blog.csdn.net/joychanger/article/details/51336527)
+* 了解与开发原生Setting5.0及以下[干货链接](http://blog.csdn.net/joychanger/article/details/51336527)
+* 了解与开发原生Setting8.0[干货链接1](https://blog.csdn.net/qq_34028539/article/details/80661047)  [干货链接2](https://blog.csdn.net/zhangbijun1230/article/details/80821641)
 * Android framework系统默认设置修改,主要是6.0以下版本[干货链接](https://blog.csdn.net/cbk861110/article/details/25216765)
+* 编译调试Android系统原生App [Setting为例](https://www.jianshu.com/p/691b2ad46e62)
 * 设置ScrollView始终显示滚动条
 ```
 android:scrollbars="vertical"
