@@ -905,7 +905,7 @@ task exportJar(type: Copy) {
 [sorting](http://sorting.at/)</br>
 [旧金山大学数据结构和算法的可视化学习工具](http://www.cs.usfca.edu/~galles/visualization/Algorithms.html)</br>
 [algorithm-visualizer](https://algorithm-visualizer.org/)
-
+* [gradle各版本下载链接](http://services.gradle.org/distributions/)
  
 
 ###  IDE plugin
