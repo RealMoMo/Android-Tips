@@ -872,6 +872,7 @@ task exportJar(type: Copy) {
     rename('classes.jar', 'your jar name.jar')
 }
 ```
+* eclipse下生成ant所需要的build.xml  [链接](https://blog.csdn.net/tinafhx/article/details/54342902)
 
 
 ### Development tools
