@@ -873,6 +873,7 @@ task exportJar(type: Copy) {
 }
 ```
 * eclipse下生成ant所需要的build.xml  [链接](https://blog.csdn.net/tinafhx/article/details/54342902)
+* RN学习[文档](https://reactnative.cn/docs/getting-started.html)
 
 
 ### Development tools
@@ -907,6 +908,7 @@ task exportJar(type: Copy) {
 [旧金山大学数据结构和算法的可视化学习工具](http://www.cs.usfca.edu/~galles/visualization/Algorithms.html)</br>
 [algorithm-visualizer](https://algorithm-visualizer.org/)
 * [gradle各版本下载链接](http://services.gradle.org/distributions/)
+* WebStorm &[注册码](https://blog.csdn.net/qq_40683441/article/details/81449829?utm_source=blogxgwz0)
  
 
 ###  IDE plugin
