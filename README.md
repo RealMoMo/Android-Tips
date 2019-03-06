@@ -874,6 +874,39 @@ task exportJar(type: Copy) {
 ```
 * eclipse下生成ant所需要的build.xml  [链接](https://blog.csdn.net/tinafhx/article/details/54342902)
 * RN学习[文档](https://reactnative.cn/docs/getting-started.html)
+* 清除某应用并在最近任务界面移除该应用(Android5.1验证)
+```
+ private void killApp(String packageName) {
+        ActivityManager activityManager = (ActivityManager) this.
+                getSystemService(Context.ACTIVITY_SERVICE);
+        //获取系统中所有正在运行的进程
+        List<ActivityManager.RecentTaskInfo> recents = activityManager.getRecentTasks(Integer.MAX_VALUE, ActivityManager.RECENT_IGNORE_UNAVAILABLE);
+        if (recents == null || recents.size() < 1) {
+            return;
+        }
+        try {
+
+            Class<?> activityManagerClass = Class.forName("android.app.ActivityManager");
+
+            Method mRemoveTask = activityManagerClass.getMethod("removeTask", new Class[]{int.class, int.class});
+            mRemoveTask.setAccessible(true);
+
+//                        List<ActivityManager.RecentTaskInfo> recents = activityManager.getRecentTasks(Integer.MAX_VALUE, ActivityManager.RECENT_IGNORE_UNAVAILABLE);
+
+            for (int i = 1; i < recents.size(); i++) {
+
+                if (recents.get(i).baseIntent.getComponent().flattenToShortString().contains(packageName)) {
+
+                    mRemoveTask.invoke(activityManager, recents.get(i).persistentId, 0);
+                }
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // activityManager.removeTask(recents.get(i).persistentId,ActivityManager.REMOVE_TASK_KILL_PROCESS);
+    }
+```
 
 
 ### Development tools
