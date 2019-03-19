@@ -907,7 +907,7 @@ task exportJar(type: Copy) {
         // activityManager.removeTask(recents.get(i).persistentId,ActivityManager.REMOVE_TASK_KILL_PROCESS);
     }
 ```
-* [手动安装apk](https://blog.csdn.net/u010218230/article/details/83824979)
+* [禁止手动安装apk](https://blog.csdn.net/u010218230/article/details/83824979)
 * Android8.0 + 版本,开启全屏的WindowManager后,后面界面响应不到触摸。 目前没有比较好解决方式,targetSdk 版本降低于26不存在改问题。
 * 系统语言设置
 ```
