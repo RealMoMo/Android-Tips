@@ -907,6 +907,44 @@ task exportJar(type: Copy) {
         // activityManager.removeTask(recents.get(i).persistentId,ActivityManager.REMOVE_TASK_KILL_PROCESS);
     }
 ```
+* [手动安装apk](https://blog.csdn.net/u010218230/article/details/83824979)
+* Android8.0 + 版本,开启全屏的WindowManager后,后面界面响应不到触摸。 目前没有比较好解决方式,targetSdk 版本降低于26不存在改问题。
+* 系统语言设置
+```
+LocalePicker.updateLocale(locale);
+```
+* [反射实例化静态内部类](https://blog.csdn.net/weixin_39437369/article/details/80967134)
+```
+//demo
+
+        Class<?> cls;
+		try {
+			cls = Class.forName("com.android.internal.inputmethod.InputMethodUtils$InputMethodSettings"); //重点用 &
+			Constructor<?> cons=null;
+			cons=cls.getConstructor(Resources.class, ContentResolver.class, HashMap.class, ArrayList.class, int.class, boolean.class);
+			mSettings = (InputMethodSettings) cons.newInstance(context.getResources(), context.getContentResolver(),
+	                mMethodMap, mMethodList, getDefaultCurrentUserId(),true);//创建新对象时调用构造方法
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+```
 
 
 ### Development tools
