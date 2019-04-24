@@ -945,7 +945,7 @@ LocalePicker.updateLocale(locale);
 		}
 
 ```
-* Android启动流程
+* Android启动流程</br>
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/android_boot_management.webp)
 * 打开某app方法
 ```
@@ -957,9 +957,10 @@ LocalePicker.updateLocale(locale);
             mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             this.startActivity(mIntent);
         } catch(ActivityNotFoundException e){
-            LogHelper.e(TAG,e.getMessage());
+            //TODO other 
         }
 ```
+* Android api>=26 全屏的WindowManager透明层悬浮窗，后面app不能响应触摸。(目前处理方式targetsdk<26)
 
 ### Development tools
 * Git
