@@ -945,7 +945,21 @@ LocalePicker.updateLocale(locale);
 		}
 
 ```
-
+* Android启动流程
+![](https://github.com/RealMoMo/Android-Tips/blob/master/img/android_boot_management.webp)
+* 打开某app方法
+```
+		try{
+            ComponentName componentName = new ComponentName(pkg, cls);
+            Intent mIntent = new Intent(Intent.ACTION_MAIN);
+            mIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+            mIntent.setComponent(componentName);
+            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            this.startActivity(mIntent);
+        } catch(ActivityNotFoundException e){
+            LogHelper.e(TAG,e.getMessage());
+        }
+```
 
 ### Development tools
 * Git
