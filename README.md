@@ -961,6 +961,28 @@ LocalePicker.updateLocale(locale);
         }
 ```
 * Android api>=26 全屏的WindowManager透明层悬浮窗，后面app不能响应触摸。(目前处理方式targetsdk<26)
+* [JobScheduler机制](http://gityuan.com/2017/03/10/job_scheduler_service/)
+* 尽量不用wakelock
+* 主动获取是否充电中(通过系统的粘性广播机制)
+```
+   /**
+     * 是否在充电
+     */
+    public static boolean isPlugged(Context context){
+        //发送一个包含充电状态的广播,并用粘性广播
+        IntentFilter filter=new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent intent = context.registerReceiver(null, filter);
+        //获取充电状态
+        int isPlugged=intent.getIntExtra(BatteryManager.EXTRA_PLUGGED,-1);
+
+        boolean acPlugged=isPlugged==BatteryManager.BATTERY_PLUGGED_AC;
+        boolean usbPlugged=isPlugged==BatteryManager.BATTERY_PLUGGED_USB;
+        boolean wrieliessPlugged=isPlugged==BatteryManager.BATTERY_PLUGGED_WIRELESS;
+
+        return acPlugged || usbPlugged || wrieliessPlugged;
+    }
+```
+
 
 ### Development tools
 * Git
