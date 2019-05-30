@@ -949,6 +949,7 @@ LocalePicker.updateLocale(locale);
 ![](https://github.com/RealMoMo/Android-Tips/blob/master/img/android_boot_management.webp)
 * 打开某app方法
 ```
+//method1:
 		try{
             ComponentName componentName = new ComponentName(pkg, cls);
             Intent mIntent = new Intent(Intent.ACTION_MAIN);
@@ -959,6 +960,11 @@ LocalePicker.updateLocale(locale);
         } catch(ActivityNotFoundException e){
             //TODO other 
         }
+        
+//method2:
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(packageName);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
 ```
 * Android api>=26 全屏的WindowManager透明层悬浮窗，后面app不能响应触摸。(目前处理方式targetsdk<26)
 * [JobScheduler机制](http://gityuan.com/2017/03/10/job_scheduler_service/)
