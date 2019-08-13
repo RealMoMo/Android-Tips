@@ -988,6 +988,19 @@ LocalePicker.updateLocale(locale);
         return acPlugged || usbPlugged || wrieliessPlugged;
     }
 ```
+* 暂停播放音乐
+```
+    /**
+      * 抢占音乐焦点
+      */
+    public static void stopSound(Context context){
+        AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+        am.requestAudioFocus(null,
+                AudioManager.STREAM_MUSIC,
+                AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+    }
+```
 
 
 ### Development tools
