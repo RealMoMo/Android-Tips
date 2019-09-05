@@ -1001,6 +1001,12 @@ LocalePicker.updateLocale(locale);
 
     }
 ```
+* 4种获取前台应用的方法 [链接](https://www.jianshu.com/p/a513accd40cd)</br>
+1.Android5.0以前，使用ActivityManager的getRunningTasks()方法，可以得到应用包名和Activity；</br>
+2.Android5.0以后，通过使用量统计功能来实现，只能得到应用包名；</br>
+3.通过辅助服务来实现，可以得到包名和Activity；</br>
+4.Android5.0以后，可以通过设备辅助应用程序来实现，能得到包名和Activity，不过这种方式必须用户主动触发（长按Home键）</br>
+
 
 
 ### Development tools
@@ -1036,7 +1042,7 @@ LocalePicker.updateLocale(locale);
 [algorithm-visualizer](https://algorithm-visualizer.org/)
 * [gradle各版本下载链接](http://services.gradle.org/distributions/)
 * WebStorm &[注册码](https://blog.csdn.net/qq_40683441/article/details/81449829?utm_source=blogxgwz0)
- 
+
 
 ###  IDE plugin
 * [CodeGlance](https://github.com/Vektah/CodeGlance)   可用于快速定位代码，类似于Sublime编辑器右侧定位视图。
@@ -1052,6 +1058,8 @@ LocalePicker.updateLocale(locale);
 * [AndroidLocalizePlugin](https://github.com/Airsaid/AndroidLocalizePlugin)也是翻译对应各国String资源
 * [JsonToKotlinClass ](https://github.com/wuseal/JsonToKotlinClass)
 * [Android Resource Usage Count](https://github.com/niorgai/Android-Resource-Usage-Count)
+* [WakaTime](https://github.com/wakatime/wakatime) 统计IDE使用时间
+* [AndroidProguardPlugin](https://github.com/zhonghanwen/AndroidProguardPlugin) 一键生成项目混淆代码插件
 
 
 ### CutsomView
