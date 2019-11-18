@@ -1006,7 +1006,54 @@ LocalePicker.updateLocale(locale);
 2.Android5.0以后，通过使用量统计功能来实现，只能得到应用包名；</br>
 3.通过辅助服务来实现，可以得到包名和Activity；</br>
 4.Android5.0以后，可以通过设备辅助应用程序来实现，能得到包名和Activity，不过这种方式必须用户主动触发（长按Home键）</br>
-
+* AppCompatActivity设置透明主题
+```
+<style name="MyTranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+</style>
+```
+* 通过反射方式设置系统语言
+```
+	private void updateLanguage(Locale locale) {
+        try {
+            Object objIActMag, objActMagNative;
+            Class clzIActMag = Class.forName("android.app.IActivityManager");
+            Class clzActMagNative = Class.forName("android.app.ActivityManagerNative");
+            Method mtdActMagNative$getDefault = clzActMagNative.getDeclaredMethod("getDefault");
+            // IActivityManager iActMag = ActivityManagerNative.getDefault();
+            objIActMag = mtdActMagNative$getDefault.invoke(clzActMagNative);
+            // Configuration config = iActMag.getConfiguration();
+            Method mtdIActMag$getConfiguration = clzIActMag.getDeclaredMethod("getConfiguration");
+            Configuration config = (Configuration) mtdIActMag$getConfiguration.invoke(objIActMag);
+            config.locale = locale;
+            // iActMag.updateConfiguration(config);
+            // 此处需要声明权限:android.permission.CHANGE_CONFIGURATION
+            // 会重新调用 onCreate();
+            Class[] clzParams = { Configuration.class };
+            Method mtdIActMag$updateConfiguration = clzIActMag.getDeclaredMethod(
+                    "updateConfiguration", clzParams);
+            mtdIActMag$updateConfiguration.invoke(objIActMag, config);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+```
+* Android 中 %s %d %f占位符使用 [链接](https://blog.csdn.net/LosingCarryJie/article/details/77141974)
+```
+%s表示字符串类型占位符，%d表示整型占位符，%f表示浮点型占位符。
+实际使用的时候一般都会使用%n$s，这里的n表示索引，第几个要被替换的字符串，而且String.format这个方法也很给力，他可以计算出你的string.xml中有多少个占位符，就让你可以填充多少参数。
+```
+* realm 主键不能自增长的处理 [链接](https://github.com/realm/realm-java/issues/469)
+* kotlin set方法。如果要用到变量,不能直接引用,需要用field字段来代表当前变量。
+```
+var isOpen: Boolean = false
+        set(value) {
+            //field 代表当前变量
+            field = value
+            if (value) ....}
+```
 
 
 ### Development tools
