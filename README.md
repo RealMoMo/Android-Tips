@@ -1055,7 +1055,7 @@ var isOpen: Boolean = false
             if (value) ....}
 ```
 * 自定义RecyclerView滚动条样式 [链接1](https://blog.csdn.net/Android_man_me/article/details/84869522)  [链接2](https://blog.csdn.net/zxg_1991/article/details/77567392)
-
+* hessian序列化相较于Serializable的效率更高，且序列化的数据更小，在基于RPC的调用方式中性能更好。注意：使用hessian序列化时，一定要子类和父类不能有同名字段成员变量。否则同名字段成员变量子类覆盖父类。
 
 ### Development tools
 * Git
