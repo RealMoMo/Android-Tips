@@ -1054,6 +1054,7 @@ var isOpen: Boolean = false
             field = value
             if (value) ....}
 ```
+* 自定义RecyclerView滚动条样式 [链接1](https://blog.csdn.net/Android_man_me/article/details/84869522)  [链接2](https://blog.csdn.net/zxg_1991/article/details/77567392)
 
 
 ### Development tools
@@ -1107,6 +1108,8 @@ var isOpen: Boolean = false
 * [Android Resource Usage Count](https://github.com/niorgai/Android-Resource-Usage-Count)
 * [WakaTime](https://github.com/wakatime/wakatime) 统计IDE使用时间
 * [AndroidProguardPlugin](https://github.com/zhonghanwen/AndroidProguardPlugin) 一键生成项目混淆代码插件
+* [ASM Bytecode Outline](http://plugins.jetbrains.com/plugin/5918-asm-bytecode-outline) 查看生成的字节码
+* [jclasslib Bytecode viewer](https://plugins.jetbrains.com/plugin/9248-jclasslib-bytecode-viewer) 查看生成的字节码
 
 
 ### CutsomView
