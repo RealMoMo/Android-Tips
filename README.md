@@ -1056,6 +1056,33 @@ var isOpen: Boolean = false
 ```
 * 自定义RecyclerView滚动条样式 [链接1](https://blog.csdn.net/Android_man_me/article/details/84869522)  [链接2](https://blog.csdn.net/zxg_1991/article/details/77567392)
 * hessian序列化相较于Serializable的效率更高，且序列化的数据更小，在基于RPC的调用方式中性能更好。注意：使用hessian序列化时，一定要子类和父类不能有同名字段成员变量。否则同名字段成员变量子类覆盖父类。
+* android 优化～addIdleHandler
+```
+//该方法没有生命周期限制，可以放在onresume可以放在oncreate中，会在CPU空闲的时候会调用
+Looper.myQueue().addIdleHandler(new MessageQueue.IdleHandler() {
+@Override
+public boolean queueIdle() {
+System.out.println("addIdleHandler");
+// 主线程空闲执行此方法
+// return true 会执行很多遍
+return false;
+}
+});
+```
+* Android 修改系统源码实现应用安装白名单黑名单拦截功能 [具体链接](https://www.geek-share.com/detail/2722253580.html)
+```
+方法一：系统自动扫描apk安装方式
+
+frameworks\base\services\java\com\android\server\pm下
+
+修改PackageManagerService下的createDataDirsLI()方法拦截要安装的PackageName是否允许安装。
+
+方法二，adb install 命令安装方式
+
+frameworks\base\cmds\pm\src\com\android\commands\pm下
+
+修改Pm下的runInstall()方法，拦截要安装的packageName是否允许安装。
+```
 
 ### Development tools
 * Git
